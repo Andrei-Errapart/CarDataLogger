@@ -1,0 +1,186 @@
+Release Notes - AVR32 UC3 Software Framework 
+--------------------------------------------
+Release version: 1.1.1 
+Release date: 2007-09-19
+
+1 Overview
+----------
+The AVR®32 AT32UC3 Software Framework consists of AVR®32 UC3 microcontroller
+drivers, software services & libraries, and demonstration applications.
+
+Each software module is provided with full source code, example of usage, rich
+html documentation and ready-to-use projects for the IAR EWAVR32 and GNU GCC
+compilers.
+
+
+2 Downloading and Installing
+----------------------------
+
+The software can be found on the AVR32 Technical Library CD, or downloaded
+from Atmel's website at http://www.atmel.com/products/AVR32/ under the
+"Tools & Software" menu.
+
+The AT32UC3A-SoftwareFramework-x.y.z.zip contains the framework for the UC3A series.
+The AT32UC3B-SoftwareFramework-x.y.z.zip contains the framework for the UC3B series.
+
+Unzip the package zip file (e.g. AT32UC3A-SoftwareFramework-x.y.z.zip) under a
+local folder on your PC.
+Open the \AT32UC3A-X.Y.Z\AVR32_Readme.html file to browse through the
+documentation.
+
+
+3 Contents
+-----------
+The following tables describe the avaibility of framework modules per AVR32 UC3
+series.
+
+|-------------------------------------| UC3A | UC3B |
+|APPLICATIONS-------------------------|------|------|
+|  EVK1100-CONTROL-PANEL              |  x   |      |
+|  EVK1101-DEMO                       |      |  x   |
+|-------------------------------------|------|------|
+
+
+|-------------------------------------| UC3A | UC3B |
+|BOARDS-------------------------------|------|------|
+|  EVK1100                            |  x   |  N/A |
+|  EVK1101                            |  N/A |  x   |
+|-------------------------------------|------|------|
+
+
+|-------------------------------------| UC3A | UC3B |
+|DRIVERS------------------------------|------|------|
+|  ADC                                |  x   |  x   |
+|  CPU / CYCLECOUNTER                 |  x   |  x   |
+|  EBI / SDRAMC                       |  x   |  N/A |
+|  EIC                                |  x   |  x   |
+|  FLASHC                             |  x   |  x   |
+|  GPIO                               |  x   |  x   |
+|  INTC                               |  x   |  x   |
+|  MACB                               |  x   |  N/A |
+|  PDCA                               |  x   |  x   |
+|  PM                                 |  x   |  x   |
+|  PWM                                |  x   |  x   |
+|  RTC                                |  x   |  x   |
+|  SPI                                |  x   |  x   |
+|  SSC                                |  x   |  x   |
+|  TC                                 |  x   |  x   |
+|  TWI                                |  x   |  x   |
+|  USART                              |  x   |  x   |
+|  USBB                               |  x   |  x   |
+|-------------------------------------|------|------|
+
+ 
+|-------------------------------------| UC3A | UC3B |
+|COMPONENTS---------------------------|------|------|
+|  ACCELEROMETER / LIS3L06AL          |      |  x   |
+|  DISPLAY / DIP204                   |  x   |      |
+|  MEMORY / DATA_FLASH                |  x   |  x   |
+|  MEMORY / SDRAM / MT48LC16M16A2TG7E |  x   |  N/A |
+|-------------------------------------|------|------|
+
+
+|-------------------------------------| UC3A | UC3B |
+|SERVICES-----------------------------|------|------|
+|  FAT                                |  x   |  x   |
+|  FREERTOS                           |  x   |  x   |
+|  LWIP                               |  x   |      |
+|  MEMORY / CTRL_ACCESS               |  x   |  x   |
+|  USB / CLASS / CDC                  |  x   |  x   |
+|  USB / CLASS / DFU                  |  x   |  x   |
+|  USB / CLASS / HID                  |  x   |  x   |
+|  USB / CLASS / MASS_STORAGE         |  x   |  x   |
+|-------------------------------------|------|------|
+
+
+|-------------------------------------| UC3A | UC3B |
+|UTILS--------------------------------|------|------|
+|  AVR32_HEADER_FILES                 |  x   |  x   |
+|  DEBUG                              |  x   |  x   |
+|  LINKER_SCRIPTS                     |  x   |  x   |
+|  PREPROCESSOR                       |  x   |  x   |
+|  STARTUP_FILES                      |  x   |  x   |
+|-------------------------------------|------|------|
+
+
+
+4 News
+------
+
+This section describes the changes between the 1.1.0 and the 1.1.1 release.
+
+4.1 New Features
+
+  * SERVICES/USB/CLASS/CDC: Add Communication Device Class (AT32UC3A/AT32UC3B) (GCC)
+
+
+4.2 Notable Bug Fixes and Improvements
+
+  * DRIVERS/USART: Add usart_test_hit, usart_tx_ready inlined function.
+
+  * .docsrc/TUTORIALS/AVR32Studio/ManagedMake tutorial: Fixed.
+
+
+4.3 Known Bugs and Limitations
+
+  * With IAR V2.20A compiler: due to wrong volatile optimization, do not turn optimization on.
+
+  * /SERVICES/FREERTOS/: IAR: DLIB functions are not compiled for multithreading.
+    -> Standard library functions like malloc, printf, etc. using global resources
+    should not be called from tasks.
+    
+  * IAR projects are not available for the UC3B series in this release.
+
+  * Some software modules do not provide EXAMPLE subdirectories (/DRIVERS/FLASHC,
+    /DRIVERS/SPI, /DRIVERS/WDT).
+
+  * For the UC3B series, some software modules do not provide EXAMPLE subdirectories
+    at all(/DRIVERS/PWM, /DRIVERS/TWI, DRIVERS/USBB, /SERVICES/FAT).
+    
+  * The avr32-gcc/avr32-ld linker generates warnings at link time. Check the
+    explanation under /.docsrc/AVR32_FrameworkGCC.html in the section titled
+    "LD `allocated section not in segment' warnings: explanation".
+
+  * /SERVICES/DSPLIB/EXAMPLES/: IAR projects for the following examples don't
+    link : ADPCM_STREAMING, DSP16_OPERATORS, DSP16_SIGNAL_GENERATION.
+
+  * /SERVICES/DSPLIB/EXAMPLES/DSP32_FIR/AT32UC3A/IAR : wrong project name.
+
+  * /APPLICATIONS/EVK1100-CONTROL-PANEL/: IAR version does not work if optimization
+    is turned on.
+
+
+5 Contact Information 
+---------------------
+
+For support on the UC3 Software Framework please log request on http://support.atmel.no/.
+
+
+6 Copyright (c) 2007, Atmel Corporation All rights reserved.
+------------------------------------------------------------
+
+Redistribution and use in source and binary forms, with or without
+modification, are permitted provided that the following conditions are met:
+
+1. Redistributions of source code must retain the above copyright notice,
+this list of conditions and the following disclaimer.
+
+2. Redistributions in binary form must reproduce the above copyright notice,
+this list of conditions and the following disclaimer in the documentation
+and/or other materials provided with the distribution.
+
+3. The name of ATMEL may not be used to endorse or promote products derived
+from this software without specific prior written permission.
+
+THIS SOFTWARE IS PROVIDED BY ATMEL ``AS IS'' AND ANY EXPRESS OR IMPLIED
+WARRANTIES, INCLUDING, BUT NOT LIMITED TO, THE IMPLIED WARRANTIES OF
+MERCHANTABILITY AND FITNESS FOR A PARTICULAR PURPOSE ARE EXPRESSLY AND
+SPECIFICALLY DISCLAIMED. IN NO EVENT SHALL ATMEL BE LIABLE FOR ANY DIRECT,
+INDIRECT, INCIDENTAL, SPECIAL, EXEMPLARY, OR CONSEQUENTIAL DAMAGES
+(INCLUDING, BUT NOT LIMITED TO, PROCUREMENT OF SUBSTITUTE GOODS OR SERVICES;
+LOSS OF USE, DATA, OR PROFITS; OR BUSINESS INTERRUPTION) HOWEVER CAUSED AND
+ON ANY THEORY OF LIABILITY, WHETHER IN CONTRACT, STRICT LIABILITY, OR TORT
+(INCLUDING NEGLIGENCE OR OTHERWISE) ARISING IN ANY WAY OUT OF THE USE OF
+THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
+
+

@@ -1,0 +1,125 @@
+<!doctype HTML public "-//W3C//DTD HTML 4.0 Frameset//EN">
+<html>
+   <head>
+      <link rel="stylesheet" type="text/css" href=".docsrc/AVR32_ns.css">
+   </head>
+	 <body>
+<h1 align="center" class="whs1">AVR&reg;32 AT32UC3 Series Software Framework<br>
+</h1>
+
+<p align="center" class="whs2">Copyright &copy; 2007 Atmel Corporation</p>
+
+<H1 ALIGN=center><IMG SRC=".docsrc/AVR32_logo_blue.png"></H1>
+
+<h2>Introduction</h2>
+    <p>The AVR&reg;32 AT32UC3 Software Framework consists of AVR&reg;32 UC3 microcontroller drivers, software services & libraries, and demonstration applications.<p>
+    Each software module is provided with full source code, example of usage, rich html documentation and ready-to-use projects for the IAR EWAVR32 and GNU GCC compilers.
+    </p>
+
+    Atmel strongly recommends that you upgrade your software by visiting <a href="http://www.atmel.com/avr32"> http://www.atmel.com/avr32 </a> and download the latest versions.
+<p>&nbsp;</p><p>&nbsp;</p>
+
+<h2>Installation</h2>
+
+The <a href=".docsrc/AVR32_Installation.html">Installation Section </a> gives instructions to install the UC3 Software Framework, hardware and software requirements.
+
+
+<p>&nbsp;</p><p>&nbsp;</p>
+
+<h2>Features</h2>
+<p>The <b>AVR&reg;32 UC3 Software Framework</b> is made of the following:</p>
+
+<DL>
+
+<DT><li><B>The Drivers </B>:</li>
+
+<DD><p class="whs3"><li><a href="./DRIVERS/AVR32_DRIVERS_Readme.html"><font color="red"></font><B>AT32UC3 series Drivers </B>(directory DRIVERS/)</a>: this directory contains software drivers for all AVR&reg;32 AT32UC3 Series on-chip resources.</p></li>
+
+<DD><p class="whs3"><li><a href="./BOARDS/BOARDS_Readme.html"><font color="red"></font><B>Boards Definition Files </B>(directory BOARDS/)</a>: this directory contains board-specific (EVK) C/C++ files with defines, macros and functions.</p></li>
+
+<DD><p class="whs3"><li><a href="./UTILS/UTILS_Readme.html"><font color="red"></font><B>C/C++ Utilities (</B>directory UTILS/)</a>: this directory contains files that are used by all other directories of the framework: it holds several linker script files and C/C++ files with general usage defines, macros and functions.</p></li>
+
+
+<p>&nbsp;</p>
+
+<DT><li><B>The Services</B>:</li>
+
+<DD><p class="whs3"><li><a href="./SERVICES/AVR32_SERVICES_Readme.html"><font color="red"></font><B>Software services </B>(directory SERVICES/)</a>: this directory contains application-oriented pieces of software that are not specific to boards nor chips.</p></li>
+
+<DD><p class="whs3"><li><a href="./COMPONENTS/COMPONENTS_Readme.html"><font color="red"></font><B>Software interface to Hardware Components </B>(directory COMPONENTS/)</a>: this directory offers, for each supported hardware component, a software interface to interact with the component.</p></li>
+
+
+<p>&nbsp;</p>
+
+<DT><li><B>The Applications </B>:</li>
+
+<DD><p class="whs3"><li><a href="./APPLICATIONS/AVR32_APPLICATIONS_Readme.html"><font color="red"></font><B>Application examples </B>(directory APPLICATIONS/)</a>: this directory contains hefty examples of applications using the Services and Drivers.</p></li>
+
+</DL>
+
+
+<p>&nbsp;</p>
+<h2>Block Diagram</h2>
+<p>Here is a simple representation of the dependencies between the UC3 software folders:</p>
+<H1 ALIGN=center><IMG SRC=".docsrc/SwFramework.jpg"></H1>
+
+<p>&nbsp;</p><p>&nbsp;</p>
+<h2>Quick Start</h2>
+  <li> <a href="./.docsrc/AVR32_FrameworkUsage.html">UC3 Software Framework Usage Description</a>: Typical organization of a module in the framework.
+  <li> GCC Embedded <a href="./.docsrc/TUTORIALS/GCC/Embedded_Development_Quick_Start.htm">  quick start </a> with DRIVER ADC example. </li>
+  <li> AVR32 Studio <a href="./.docsrc/TUTORIALS/AVR32Studio/AVR32Studio_ManagedMake_QuickStart.htm">  quick start </a> with LCD Hello World example. </li>
+<!-- UC3A_START -->
+  <li> EVK1100 Control Panel <a href="./.docsrc/TUTORIALS/EVK1100-CONTROL-PANEL/EVK1100-controlpanel.pdf" target="_blank">  tutorial </a> with an introduction and use cases. </li>
+<!-- UC3A_END -->
+<p>&nbsp;</p>
+
+
+<p>&nbsp;</p>
+
+<h2>Release note</h2>
+Overview, content, list of new features, bug fixes and known bugs per release: <a href="./uc3softwareframework-releasenote.txt"><font color="red"></font>uc3softwareframework-releasenote.txt</a>.
+
+<p>&nbsp;</p>
+<p>&nbsp;</p>
+<p>&nbsp;</p>
+<hr align="center" width="50%" class="whs1">
+<h2>Contact Info</h2>
+For more info about Atmel AVR&reg;32 visit <a href="http://www.atmel.com/products/AVR32/">Atmel AVR32</a> <br>
+ <a href="http://www.atmel.com/dyn/products/app_notes.asp?family_id=682">AVR32 Application Notes</a><br>
+ Support and FAQ: <a href="http://support.atmel.no/">http://support.atmel.no/</a>
+
+<h2> License </h2>
+
+Copyright (c) 2007, Atmel Corporation All rights reserved.
+Redistribution and use in source and binary forms, with or without
+modification, are permitted provided that the following conditions are met: <p>
+1. Redistributions of source code must retain the above copyright notice,
+this list of conditions and the following disclaimer. <p>
+2. Redistributions in binary form must reproduce the above copyright notice,
+this list of conditions and the following disclaimer in the documentation
+and/or other materials provided with the distribution. <p>
+3. The name of ATMEL may not be used to endorse or promote products derived
+from this software without specific prior written permission.
+<p>&nbsp;</p>
+THIS SOFTWARE IS PROVIDED BY ATMEL ``AS IS'' AND ANY EXPRESS OR IMPLIED
+WARRANTIES, INCLUDING, BUT NOT LIMITED TO, THE IMPLIED WARRANTIES OF
+MERCHANTABILITY AND FITNESS FOR A PARTICULAR PURPOSE ARE EXPRESSLY AND
+SPECIFICALLY DISCLAIMED. IN NO EVENT SHALL ATMEL BE LIABLE FOR ANY DIRECT,
+INDIRECT, INCIDENTAL, SPECIAL, EXEMPLARY, OR CONSEQUENTIAL DAMAGES
+(INCLUDING, BUT NOT LIMITED TO, PROCUREMENT OF SUBSTITUTE GOODS OR SERVICES;
+LOSS OF USE, DATA, OR PROFITS; OR BUSINESS INTERRUPTION) HOWEVER CAUSED AND
+ON ANY THEORY OF LIABILITY, WHETHER IN CONTRACT, STRICT LIABILITY, OR TORT
+(INCLUDING NEGLIGENCE OR OTHERWISE) ARISING IN ANY WAY OUT OF THE USE OF
+THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
+
+
+<p>&nbsp;</p>
+
+
+<hr align="center" width="50%" class="whs4">
+
+    <p class=legalfooter>AVR is a registered trademark of
+    Atmel Corporation. </p>
+
+   </body>
+</html>

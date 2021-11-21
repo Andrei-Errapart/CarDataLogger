@@ -1,0 +1,78 @@
+<!doctype HTML public "-//W3C//DTD HTML 4.0 Frameset//EN">
+<html>
+   <head>
+      <link rel="stylesheet" type="text/css" href="../.docsrc/AVR32_ns.css">
+   </head>
+	 <body>
+<p align="left" class="whs2"><a href="../AVR32_Readme.html"<font color="red"></font>Back to main page</a></p>
+<h1 align="center" class="whs1">AVR&reg;32 AT32UC3 Series Software Framework: the UTILS folder<br>
+</h1>
+
+<p align="center" class="whs2">Copyright &copy; 2007 Atmel Corporation</p>
+
+<h2>Introduction</h2>
+    <p> This folder is a collection of software C functions and preprocessor macros.<p>
+
+<p>&nbsp;</p>
+
+<h2>UTILS folder Description</h2>
+<p>This directory consists of the following contents:</p>
+
+<DL>
+<DT><li><a href="./compiler.h"><B>compiler.h</B></a></li>
+<p>This file defines commonly used types and macros.</p>
+</DL>
+
+<DL>
+<DT><li><B>AVR32_HEADER_FILES folder</B></li>
+<p>This module gathers a set of header files for the avr32-gcc Gnu Compiler Collection (see the <a href="./AVR32_HEADER_FILES/GCC/AVR32_Header_Files_for_AVR32-GCC.zip">AVR32_Header_Files_for_AVR32-GCC.zip</a> file) 
+and a set of header files for the IAR IDE (see the <a href="./AVR32_HEADER_FILES/IAR/AVR32_Header_Files_for_IAR_EWAVR32_2.20A.zip">AVR32_Header_Files_for_IAR_EWAVR32_2.20A.zip</a> file).</p>
+<p>For installation of these header files, see the <a href="../.docsrc/AVR32_Installation.html">installation page</a>.</p>
+</DL>
+
+<DL>
+<DT><li><B>DEBUG folder</B></li>
+<p>This module gathers a set of useful functions to print data on the USART.</p>
+<a href="./DEBUG/print_funcs.h">print_funcs.h</a> is the interface of this module and <a href="./DEBUG/print_funcs.c">print_funcs.c</a> is its implementation.
+</DL>
+
+<DL>
+<DT><li><B>STARTUP_FILES folder</B></li>
+<p>This module gathers a set of pre-written startup files per compiler.</p>
+<p>A startup file gets executed just after the reset vector and before the main() C function (when it's done doing its work, the startup actually jumps to the main() function).</p>
+<p>The main mission of a startup file is to initialize critical registers (example: the stack pointer) and memory.</p>
+<p>For example, the following GCC startup file is under the <B><I>./STARTUP_FILES/GCC/</B></I> folder:</p>
+<DD><p class="whs3"><li><a href="./STARTUP_FILES/GCC/crt0.S"><font color="red"></font>crt0.S</a>: example of a basic startup file, completely written in assembly language.</p></li>
+</DL>
+
+<DL>
+<DT><li><B>LINKER_SCRIPTS folder</B></li>
+<p>This module gathers a set of pre-written linker scripts per microcontroller and compiler.</p>
+<!-- UC3A_START -->
+<p>For example, the following linker scripts for the AT32UC3A0512 microcontroller are under the <B><I>./LINKER_SCRIPTS/AT32UC3A/0512/</B></I> folder:</p>
+<DD><p class="whs3"><li><a href="./LINKER_SCRIPTS/AT32UC3A/0512/GCC/link_uc3a0512.lds">GCC/link_uc3a0512.lds</a> : this script allows to link code with GCC.</p></li></DD>
+<DD><p class="whs3"><li><a href="./LINKER_SCRIPTS/AT32UC3A/0512/IAR/lnkuc3a0512.xcl">IAR/lnkuc3a0512.xcl</a> : this script allows to link code with IAR.</p></li></DD>
+<!-- UC3A_END -->
+</DL>
+
+<DL>
+<DT><li><B>PREPROCESSOR folder</B></li>
+<p>This module gathers a set of useful C preprocessor macros. It is composed of the files
+<DD><p><li><a href="./PREPROCESSOR/mrepeat.h">mrepeat.h</a>: C preprocessor repeating set of macros,</p>
+<DD><p><li><a href="./PREPROCESSOR/preprocessor.h">preprocessor.h</a>: include of all header files of this module (so that applications only use to include this file),</p>
+<DD><p><li><a href="./PREPROCESSOR/stringz.h">stringz.h</a>: C preprocessor stringenizer set of macros,</p>
+<DD><p><li><a href="./PREPROCESSOR/tpaste.h">tpaste.h</a>: C preprocessor token manipulation set of macros.</p>
+</DL>
+
+
+<p>&nbsp;</p>
+
+
+
+<hr align="center" width="50%" class="whs4">
+
+    <p class=legalfooter>AVR is a registered trademark of
+    Atmel Corporation. </p>
+
+   </body>
+</html>

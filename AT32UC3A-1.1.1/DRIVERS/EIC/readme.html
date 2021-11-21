@@ -1,0 +1,50 @@
+<!doctype HTML public "-//W3C//DTD HTML 4.0 Frameset//EN">
+<html>
+   <head>
+      <link rel="stylesheet" type="text/css" href="../../.docsrc/AVR32_ns.css">
+   </head>
+   <body>
+<p align="left" class="whs2"><a href="../AVR32_DRIVERS_Readme.html"<font color="red"></font>Back to DRIVERS page</a></p>
+<h1 align="center" class="whs1">AVR®32 AT32UC3 Series Software Framework: External Interrupt Controller Driver<br>
+</h1>
+
+<p align="center" class="whs2">Copyright &copy; 2007 Atmel Corporation</p>
+
+<h2>Introduction</h2>
+    <p>The External Interrupt Module allows pins to be configured as external interrupts. It can wake up CPU
+    	from sleep modes. This module has keypad support. The pressed key will trigger an interrupt, which can be identified
+ 			through the user registers of the module.
+		</p>
+
+<p>&nbsp;</p>
+
+<h2>External Interrupt Controller Driver</h2>
+The EIC software driver philosophy of usage is:
+<li> Configure one (or several) EIC lines [<i>eic_init()</i>]</li>
+<li> Enable one (or several) lines, [<i>eic_enable_lines()</i>]</li>
+<li> Enable one (or several) interrupt lines, [<i>eic_enable_interrupt_lines()</i>]</li>
+<li> Eventually enable one (or several) interrupt scan lines, [<i>eic_enable_interrupt_scan()</i>]</li>
+<li> Clear interrupt lines when interrupt occurs [<i>eic_clear_interrupt_lines()</i>] / Eventually get scan lines that generated an interrupt [<i>eic_get_interrupt_pad_scan()</i>] </li>
+
+<p>&nbsp;</p>
+
+<p>The driver is composed of <a href="eic.c">eic.c</a> and <a href="eic.h">eic.h</a>.</p>
+
+<p>&nbsp;</p>
+
+<h2>EIC software driver examples</h2>
+    <p>Three examples are available. All provided examples cover various use of
+    the EIC and demonstrate different EIC functionalities.</p>
+    <li>EXAMPLE1: <a href="EXAMPLE1/readme.html">how to configure the EIC to wake up the CPU</a>,</li>
+    <li>EXAMPLE2: <a href="EXAMPLE2/readme.html">how to use the EIC to generate Interrupt</a>,</li>
+    <li>EXAMPLE3: <a href="EXAMPLE3/readme.html">how to use the EIC to decode keypad</a></li>
+
+<p>&nbsp;</p>
+
+<hr align="center" width="50%" class="whs4">
+
+    <p class=legalfooter>AVR is a registered trademark of
+    Atmel Corporation.</p>
+
+   </body>
+</html>

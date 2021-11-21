@@ -1,0 +1,47 @@
+<!doctype HTML public "-//W3C//DTD HTML 4.0 Frameset//EN">
+<html>
+   <head>
+      <link rel="stylesheet" type="text/css" href="../../.docsrc/AVR32_ns.css">
+   </head>
+   <body>
+<p align="left" class="whs2"><a href="../AVR32_DRIVERS_Readme.html"<font color="red"></font>Back to DRIVERS page</a></p>
+<h1 align="center" class="whs1">AVR®32 AT32UC3 Series Software Framework: Pulse Width Modulation (PWM) Driver<br>
+</h1>
+
+<p align="center" class="whs2">Copyright &copy; 2007 Atmel Corporation</p>
+
+<h2>Introduction</h2>
+    <p>The Pulse Width Modulation Controler (PWM) controls several channels independently.
+    Each channel controls one square output waveform. Characteristics of the output waveform
+    such as period, duty-cycle and polarity are configurable.</p>
+
+<p>&nbsp;</p>
+
+<h2>PWM Software Driver</h2>
+    
+    <p>This driver provides an API to get access to the main features of the PWM controler. Its "philosophy" of usage is:
+       <li>Initialize the PWM controller (mode register) and disable the interrupt [<i>pwm_init()</i>]
+       <li>Initialize a specific PWM channel [<i>pwm_channel_init()</i>]
+       <li>Start one or several PWM channels [<i>pwm_start_channels()</i>]
+       <li>Stop one or several PWM channels [<i>pwm_stop_channels()</i>]
+       <li>Eventually update the duty cycle or the period of the output waveform of a channel, direct-call method [<i>pwm_update_channel()</i>]
+       <li>Eventually update the duty cycle or the period of the output waveform of a channel, interrupt-based method [<i>pwm_interrupt_update_channel()</i>]
+    </p>
+    <p>&nbsp;</p>
+    <p>The driver is composed of <a href="pwm.c">pwm.c</a> and <a href="pwm.h">pwm.h</a>.</p>
+    <p>&nbsp;</p>
+
+<h2>PWM Software Driver Examples</h2>
+<!-- UC3A_START -->
+  <p>One example is available: <a href="./EXAMPLE/readme.html"> how to configure a PWM and output it on a GPIO.</a>.</p>
+<!-- UC3A_END -->
+
+<p>&nbsp;</p>
+
+<hr align="center" width="50%" class="whs4">
+
+    <p class=legalfooter>AVR is a registered trademark of
+    Atmel Corporation.</p>
+
+   </body>
+</html>

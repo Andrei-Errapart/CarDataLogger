@@ -1,0 +1,42 @@
+<!doctype HTML public "-//W3C//DTD HTML 4.0 Frameset//EN">
+<html>
+   <head>
+      <link rel="stylesheet" type="text/css" href="../../.docsrc/AVR32_ns.css">
+   </head>
+	 <body>
+<p align="left" class="whs2"><a href="../AVR32_DRIVERS_Readme.html"<font color="red"></font>Back to DRIVERS page</a></p>
+<h1 align="center" class="whs1">AVR&reg;32 AT32UC3 Series Software Framework: the Synchronous Serial Controller (SSC)<br>
+</h1>
+
+<p align="center" class="whs2">Copyright &copy; 2007 Atmel Corporation</p>
+
+<h2>Introduction</h2>
+    <p>The Atmel Synchronous Serial Controller (SSC) provides a synchronous communication link
+with external devices. It supports many serial synchronous communication protocols generally
+used in audio and telecom applications such as I2S, Short Frame Sync, Long Frame Sync, etc.</p>
+
+<p>&nbsp;</p>
+
+<h2>Synchronous Links SSC Drivers</h2>
+<p>Because the SSC supports many serial synchronous communication protocols, the SSC
+folder will hold several drivers (one driver per protocol). The amount of SSC drivers
+provided in the Software Framework will increase over time.</p>
+
+<DL>
+<DT>
+<p class="whs3"><li><a href="./USART/readme.html "><font color="red"></font> USART mode API driver</a>: this driver shows how to use the SSC in USART protocol mode. With an interactive example of usage.</p></li>
+</DL>
+
+<p>&nbsp;</p>
+<!-- UC3A_START -->
+<B>Note:</B> On Rev. E of AT32UC3A0512, the data is not sent unless clock is set as output. <B><U>Fix/Workaround:</U></B> Set TCMR.CKO to a value that is not "none" and bypass the output of the TK/RK pin with the PIO.
+<p>&nbsp;</p>
+<!-- UC3A_END -->
+
+<hr align="center" width="50%" class="whs4">
+
+    <p class=legalfooter>AVR is a registered trademark of
+    Atmel Corporation. </p>
+
+   </body>
+</html>
